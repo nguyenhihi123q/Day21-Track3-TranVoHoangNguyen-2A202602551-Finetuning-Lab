@@ -1,0 +1,74 @@
+{
+  "purpose": "Five selected pairs; question text resolved by original eval index; frozen artifacts unchanged",
+  "pairs": [
+    {
+      "group": "regression",
+      "i": 2,
+      "input": "1 km bằng bao nhiêu mét?",
+      "reference": [
+        "1000"
+      ],
+      "baseline": "Trong hệ đo lường quốc tế, tiền tố \"kilo\" (ký hiệu là **km**) có nghĩa là **1000**. Do đó, 1 kilômét tương đương với 1000 mét.\n\nKết quả: **1 km = 1000 m**.",
+      "finetune": "{\"intent\": \"hoi_thong_tin\", \"urgency\": \"thap\", \"product\": null, \"sentiment\": \"trung_tinh\", \"intent_confidence\": 0.95, \"urgency_confidence\": 0.98, \"product_confidence\": 0.0, \"sentiment_confidence\": 0.92}",
+      "baseline_score": 1.0,
+      "ft_score": 0.0
+    },
+    {
+      "group": "regression",
+      "i": 9,
+      "input": "Một năm có bao nhiêu tháng?",
+      "reference": [
+        "12"
+      ],
+      "baseline": "Một năm bình thường có **12 tháng**.\n\nCụ thể, các tháng trong năm là:\n1. Tháng 1\n2. Tháng 2\n3. Tháng 3\n4. Tháng 4\n5. Tháng 5\n6. Tháng 6\n7. Tháng 7\n8. Tháng 8\n9. Tháng 9\n10. Tháng 10\n11. Tháng 11\n12. Tháng",
+      "finetune": "{\"intent\": \"hoi_thong_tin\", \"urgency\": \"thap\", \"sentiment\": \"trung_tinh\", \"product\": null, \"intent_confidence\": 0.95, \"urgency_confidence\": 0.98, \"sentiment_confidence\": 0.92}",
+      "baseline_score": 1.0,
+      "ft_score": 0.0
+    },
+    {
+      "group": "target",
+      "i": 0,
+      "input": "Cho mình hỏi, mình đặt chuột không dây mã đơn VN232232. Cho tôi trả lại. Gấp. Shop hỗ trợ tốt.",
+      "reference": {
+        "intent": "doi_tra",
+        "urgency": "cao",
+        "product": "chuột không dây",
+        "sentiment": "tich_cuc"
+      },
+      "baseline": "{\"intent\": \"hoan_tien\", \"urgency\": \"cao\", \"product\": \"chuột không dây\", \"sentiment\": \"tich_cuc\"}",
+      "finetune": "{\"intent\": \"doi_tra\", \"urgency\": \"cao\", \"product\": \"chuột không dây\", \"sentiment\": \"tich_cuc\"}",
+      "baseline_score": 0.75,
+      "ft_score": 1.0
+    },
+    {
+      "group": "target",
+      "i": 1,
+      "input": "Shop ơi, mình đặt ốp lưng điện thoại mã đơn VN812931. Hoàn tiền. Sớm nhé. Bực mình.",
+      "reference": {
+        "intent": "hoan_tien",
+        "urgency": "trung_binh",
+        "product": "ốp lưng điện thoại",
+        "sentiment": "tieu_cuc"
+      },
+      "baseline": "{\"intent\": \"hoan_tien\", \"urgency\": \"cao\", \"product\": \"ốp lưng điện thoại\", \"sentiment\": \"tieu_cuc\"}",
+      "finetune": "{\"intent\": \"hoan_tien\", \"urgency\": \"trung_binh\", \"product\": \"ốp lưng điện thoại\", \"sentiment\": \"tieu_cuc\"}",
+      "baseline_score": 0.75,
+      "ft_score": 1.0
+    },
+    {
+      "group": "target",
+      "i": 4,
+      "input": "Cho mình hỏi, mình đặt đèn bàn LED mã đơn VN339109. Vỡ khi nhận. Gấp. Shop xem giúp.",
+      "reference": {
+        "intent": "san_pham_loi",
+        "urgency": "cao",
+        "product": "đèn bàn LED",
+        "sentiment": "trung_tinh"
+      },
+      "baseline": "{\"intent\": \"san_pham_loi\", \"urgency\": \"cao\", \"product\": \"đèn bàn LED\", \"sentiment\": \"tieu_cuc\"}",
+      "finetune": "{\"intent\": \"san_pham_loi\", \"urgency\": \"cao\", \"product\": \"đèn bàn LED\", \"sentiment\": \"trung_tinh\"}",
+      "baseline_score": 0.75,
+      "ft_score": 1.0
+    }
+  ]
+}

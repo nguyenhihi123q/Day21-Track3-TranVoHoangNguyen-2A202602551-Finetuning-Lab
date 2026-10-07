@@ -1,0 +1,166 @@
+tier=T4  mask=assistant-only  eval_limit=full
+
+========================================================================
+NB2 — freeze eval + three baselines
+========================================================================
+target=50  regression=15  tier=T4
+
+Loading weights:   0%|          | 0/426 [00:00<?, ?it/s]
+Loading weights:   0%|          | 1/426 [00:09<1:10:40,  9.98s/it]
+Loading weights:  19%|█▊        | 79/426 [00:10<00:33, 10.48it/s] 
+Loading weights:  21%|██        | 88/426 [00:10<00:30, 11.19it/s]
+Loading weights:  22%|██▏       | 94/426 [00:11<00:29, 11.25it/s]
+Loading weights:  23%|██▎       | 98/426 [00:11<00:29, 11.09it/s]
+Loading weights:  24%|██▎       | 101/426 [00:12<00:30, 10.61it/s]
+Loading weights:  24%|██▍       | 104/426 [00:12<00:28, 11.23it/s]
+Loading weights:  25%|██▌       | 107/426 [00:12<00:26, 11.94it/s]
+Loading weights:  27%|██▋       | 114/426 [00:12<00:19, 15.84it/s]
+Loading weights:  27%|██▋       | 117/426 [00:12<00:18, 16.81it/s]
+Loading weights:  28%|██▊       | 120/426 [00:13<00:26, 11.58it/s]
+Loading weights:  30%|███       | 129/426 [00:13<00:16, 18.25it/s]
+Loading weights:  31%|███       | 133/426 [00:14<00:19, 14.82it/s]
+Loading weights:  32%|███▏      | 136/426 [00:14<00:21, 13.31it/s]
+Loading weights:  34%|███▎      | 143/426 [00:14<00:15, 18.47it/s]
+Loading weights:  34%|███▍      | 146/426 [00:14<00:19, 14.45it/s]
+Loading weights:  35%|███▍      | 149/426 [00:15<00:22, 12.27it/s]
+Loading weights:  36%|███▌      | 152/426 [00:15<00:25, 10.91it/s]
+Loading weights:  37%|███▋      | 157/426 [00:15<00:19, 13.90it/s]
+Loading weights:  37%|███▋      | 159/426 [00:16<00:20, 13.20it/s]
+Loading weights:  39%|███▉      | 167/426 [00:16<00:12, 20.20it/s]
+Loading weights:  40%|███▉      | 170/426 [00:16<00:12, 20.39it/s]
+Loading weights:  41%|████      | 173/426 [00:16<00:21, 11.95it/s]
+Loading weights:  42%|████▏     | 181/426 [00:17<00:12, 19.59it/s]
+Loading weights:  43%|████▎     | 185/426 [00:17<00:15, 15.44it/s]
+Loading weights:  44%|████▍     | 188/426 [00:17<00:18, 12.99it/s]
+Loading weights:  46%|████▌     | 196/426 [00:18<00:11, 19.67it/s]
+Loading weights:  47%|████▋     | 200/426 [00:18<00:14, 15.25it/s]
+Loading weights:  48%|████▊     | 203/426 [00:18<00:16, 13.78it/s]
+Loading weights:  48%|████▊     | 206/426 [00:19<00:19, 11.25it/s]
+Loading weights:  49%|████▉     | 210/426 [00:19<00:15, 13.88it/s]
+Loading weights:  50%|█████     | 213/426 [00:19<00:15, 14.01it/s]
+Loading weights:  52%|█████▏    | 220/426 [00:19<00:10, 19.91it/s]
+Loading weights:  52%|█████▏    | 223/426 [00:19<00:10, 19.48it/s]
+Loading weights:  53%|█████▎    | 226/426 [00:20<00:16, 11.82it/s]
+Loading weights:  55%|█████▍    | 234/426 [00:20<00:09, 19.43it/s]
+Loading weights:  56%|█████▌    | 238/426 [00:21<00:12, 15.31it/s]
+Loading weights:  57%|█████▋    | 241/426 [00:21<00:14, 12.77it/s]
+Loading weights:  58%|█████▊    | 249/426 [00:21<00:09, 19.36it/s]
+Loading weights:  59%|█████▉    | 253/426 [00:22<00:11, 14.59it/s]
+Loading weights:  60%|██████    | 256/426 [00:22<00:12, 13.55it/s]
+Loading weights:  61%|██████    | 258/426 [00:22<00:16, 10.15it/s]
+Loading weights:  61%|██████    | 260/426 [00:22<00:14, 11.11it/s]
+Loading weights:  62%|██████▏   | 263/426 [00:22<00:12, 13.13it/s]
+Loading weights:  62%|██████▏   | 265/426 [00:23<00:14, 10.96it/s]
+Loading weights:  64%|██████▍   | 273/426 [00:23<00:08, 18.99it/s]
+Loading weights:  65%|██████▍   | 276/426 [00:23<00:08, 18.19it/s]
+Loading weights:  65%|██████▌   | 279/426 [00:24<00:14, 10.15it/s]
+Loading weights:  67%|██████▋   | 287/426 [00:24<00:08, 16.44it/s]
+Loading weights:  68%|██████▊   | 290/426 [00:24<00:08, 16.28it/s]
+Loading weights:  69%|██████▉   | 293/426 [00:25<00:12, 10.44it/s]
+Loading weights:  71%|███████   | 302/426 [00:25<00:06, 17.98it/s]
+Loading weights:  72%|███████▏  | 306/426 [00:25<00:08, 14.44it/s]
+Loading weights:  73%|███████▎  | 309/426 [00:26<00:08, 13.38it/s]
+Loading weights:  73%|███████▎  | 312/426 [00:26<00:10, 10.63it/s]
+Loading weights:  75%|███████▍  | 318/426 [00:27<00:08, 12.58it/s]
+Loading weights:  77%|███████▋  | 326/426 [00:27<00:05, 19.15it/s]
+Loading weights:  77%|███████▋  | 330/426 [00:27<00:06, 15.42it/s]
+Loading weights:  78%|███████▊  | 333/426 [00:27<00:07, 12.84it/s]
+Loading weights:  80%|████████  | 341/426 [00:28<00:04, 19.23it/s]
+Loading weights:  81%|████████  | 345/426 [00:28<00:05, 14.73it/s]
+Loading weights:  82%|████████▏ | 348/426 [00:28<00:05, 13.50it/s]
+Loading weights:  83%|████████▎ | 355/426 [00:29<00:03, 18.86it/s]
+Loading weights:  84%|████████▍ | 358/426 [00:29<00:04, 14.72it/s]
+Loading weights:  85%|████████▍ | 361/426 [00:29<00:05, 12.52it/s]
+Loading weights:  85%|████████▌ | 364/426 [00:30<00:05, 11.12it/s]
+Loading weights:  87%|████████▋ | 369/426 [00:30<00:04, 13.92it/s]
+Loading weights:  87%|████████▋ | 371/426 [00:30<00:04, 12.68it/s]
+Loading weights:  89%|████████▉ | 379/426 [00:30<00:02, 18.28it/s]
+Loading weights:  90%|████████▉ | 382/426 [00:30<00:02, 19.67it/s]
+Loading weights:  90%|█████████ | 385/426 [00:31<00:04,  9.64it/s]
+Loading weights:  92%|█████████▏| 394/426 [00:31<00:01, 16.16it/s]
+Loading weights:  93%|█████████▎| 397/426 [00:32<00:02, 12.62it/s]
+Loading weights:  94%|█████████▍| 400/426 [00:32<00:02, 11.43it/s]
+Loading weights:  96%|█████████▌| 407/426 [00:32<00:01, 16.04it/s]
+Loading weights:  96%|█████████▌| 410/426 [00:33<00:01, 15.71it/s]
+Loading weights:  97%|█████████▋| 413/426 [00:33<00:01, 10.24it/s]
+Loading weights:  98%|█████████▊| 417/426 [00:34<00:00, 10.57it/s]
+Loading weights:  98%|█████████▊| 419/426 [00:34<00:00, 11.36it/s]
+Loading weights: 100%|█████████▉| 424/426 [00:34<00:00, 13.91it/s]
+Loading weights: 100%|██████████| 426/426 [00:34<00:00, 12.35it/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+  [(a) base + naive prompt/target] batch 1/13     16s elapsed  ~  188s left
+  [(a) base + naive prompt/target] batch 2/13     28s elapsed  ~  155s left
+  [(a) base + naive prompt/target] batch 3/13     41s elapsed  ~  137s left
+  [(a) base + naive prompt/target] batch 4/13     54s elapsed  ~  121s left
+  [(a) base + naive prompt/target] batch 5/13     66s elapsed  ~  106s left
+  [(a) base + naive prompt/target] batch 6/13     79s elapsed  ~   92s left
+  [(a) base + naive prompt/target] batch 7/13     91s elapsed  ~   78s left
+  [(a) base + naive prompt/target] batch 8/13    103s elapsed  ~   64s left
+  [(a) base + naive prompt/target] batch 9/13    115s elapsed  ~   51s left
+  [(a) base + naive prompt/target] batch 10/13    128s elapsed  ~   38s left
+  [(a) base + naive prompt/target] batch 11/13    140s elapsed  ~   25s left
+  [(a) base + naive prompt/target] batch 12/13    152s elapsed  ~   13s left
+  [(a) base + naive prompt/target] batch 13/13    165s elapsed  ~    0s left
+  [(a) base + naive prompt/target] done: 50 prompts in 165s
+  [(a) base + naive prompt/regression] batch 1/4      5s elapsed  ~   15s left
+  [(a) base + naive prompt/regression] batch 2/4     13s elapsed  ~   13s left
+  [(a) base + naive prompt/regression] batch 3/4     20s elapsed  ~    7s left
+  [(a) base + naive prompt/regression] batch 4/4     27s elapsed  ~    0s left
+  [(a) base + naive prompt/regression] done: 15 prompts in 27s
+(a) base + naive prompt      target=0.000  regression=0.791  format=0.000  3288ms
+  [(b) base + optimized prompt/target] batch 1/13      4s elapsed  ~   50s left
+  [(b) base + optimized prompt/target] batch 2/13      8s elapsed  ~   46s left
+  [(b) base + optimized prompt/target] batch 3/13     12s elapsed  ~   40s left
+  [(b) base + optimized prompt/target] batch 4/13     16s elapsed  ~   36s left
+  [(b) base + optimized prompt/target] batch 5/13     20s elapsed  ~   32s left
+  [(b) base + optimized prompt/target] batch 6/13     24s elapsed  ~   28s left
+  [(b) base + optimized prompt/target] batch 7/13     27s elapsed  ~   23s left
+  [(b) base + optimized prompt/target] batch 8/13     31s elapsed  ~   19s left
+  [(b) base + optimized prompt/target] batch 9/13     35s elapsed  ~   16s left
+  [(b) base + optimized prompt/target] batch 10/13     39s elapsed  ~   12s left
+  [(b) base + optimized prompt/target] batch 11/13     43s elapsed  ~    8s left
+  [(b) base + optimized prompt/target] batch 12/13     47s elapsed  ~    4s left
+  [(b) base + optimized prompt/target] batch 13/13     50s elapsed  ~    0s left
+  [(b) base + optimized prompt/target] done: 50 prompts in 50s
+  [(b) base + optimized prompt/regression] batch 1/4      5s elapsed  ~   15s left
+  [(b) base + optimized prompt/regression] batch 2/4     13s elapsed  ~   13s left
+  [(b) base + optimized prompt/regression] batch 3/4     20s elapsed  ~    7s left
+  [(b) base + optimized prompt/regression] batch 4/4     27s elapsed  ~    0s left
+  [(b) base + optimized prompt/regression] done: 15 prompts in 27s
+(b) base + optimized prompt  target=0.765  regression=0.791  format=1.000  1008ms
+{
+  "tier": "T4",
+  "model": "unsloth/Qwen3.5-4B",
+  "baseline_a": {
+    "target": 0.0,
+    "regression": 0.7911111111111111,
+    "format": 0.0,
+    "latency_ms": 3287.969273739995,
+    "n": 50,
+    "extra": {}
+  },
+  "baseline_b": {
+    "target": 0.765,
+    "regression": 0.7911111111111111,
+    "format": 1.0,
+    "latency_ms": 1007.591535359993,
+    "n": 50,
+    "extra": {}
+  },
+  "optimized_prompt_sha": "719e74d3b6232053",
+  "n_target": 50,
+  "n_regression": 15,
+  "eval_limit": null,
+  "smoke_mode": false
+}
+
+-- NB2 ok in 320s
+
+----------------------------------------
+stage timings
+  nb2       320s  (5.3 min)
+  total     320s (5.3 min)

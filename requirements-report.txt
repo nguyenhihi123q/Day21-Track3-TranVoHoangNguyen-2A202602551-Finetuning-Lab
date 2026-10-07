@@ -1,0 +1,2 @@
+# Used only by scripts/finalize_submission.py to regenerate report figures.
+matplotlib==3.11.2

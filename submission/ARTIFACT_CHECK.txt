@@ -1,0 +1,21 @@
+Artifact/integrity checks only; unit tests not run.
+PASS: results/template_check.json 
+PASS: results/mask_proof.json 
+PASS: results/token_stats.json 
+PASS: results/baselines_frozen.json 
+PASS: results/runs.csv 
+PASS: results/verdict.json 
+PASS: results/autopsy.json 
+PASS: submission/REPORT.md 
+PASS: REPORT.md filled in ~3150 words
+PASS: mask proof asserts 
+PASS: full eval set used 50 target items
+PASS: baseline (b) prompt unmodified 
+PASS: baseline (b) beats (a) (a)=0.000 -> (b)=0.765
+PASS: eval sets unmodified 
+PASS: NB3 run present 
+PASS: NB4 contrast runs 
+PASS: all runs share ONE step budget ['attn_only', 'correct', 'qlora', 'wrong_lr'] at 30 steps
+PASS: attn_only is a FAIR contrast 32,456,704 vs 32,464,896 trainable params
+PASS: verdict recorded FAILED (target Δ +0.205, regression Δ -0.136)
+WARN: note A FAILED verdict is fully gradeable — analyse it honestly in REPORT.md rather than loosening the gate.

@@ -37,3 +37,8 @@ hf_cache/
 .idea/
 .vscode/
 *.swp
+
+# Local Colab backups and submission archives
+colab/downloads/
+submission/packages/
+logs/

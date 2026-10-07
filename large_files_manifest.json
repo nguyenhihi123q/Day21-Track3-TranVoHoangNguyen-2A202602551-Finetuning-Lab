@@ -1,0 +1,49 @@
+[
+  {
+    "path": "adapters/attn_only/adapter_model.safetensors",
+    "sha256": "bf263d3972d44a8c7d779f5ea866138fc6ab1e8abc047ce036f8a29f2dc0c816",
+    "parts": [
+      "adapters/attn_only/adapter_model.safetensors.part001",
+      "adapters/attn_only/adapter_model.safetensors.part002"
+    ]
+  },
+  {
+    "path": "adapters/correct/adapter_model.safetensors",
+    "sha256": "56e43b99b43269b8fcc68cc3ec99e63f35eb17fbee0e5e73cb90e6a0b8ee84b2",
+    "parts": [
+      "adapters/correct/adapter_model.safetensors.part001",
+      "adapters/correct/adapter_model.safetensors.part002"
+    ]
+  },
+  {
+    "path": "adapters/qlora/adapter_model.safetensors",
+    "sha256": "398b63188bce5b4d7ee1623c5484033540d9637625d4db8a07f8f18f3ffb7057",
+    "parts": [
+      "adapters/qlora/adapter_model.safetensors.part001",
+      "adapters/qlora/adapter_model.safetensors.part002"
+    ]
+  },
+  {
+    "path": "adapters/wrong_lr/adapter_model.safetensors",
+    "sha256": "0bdafb991fae47d380e4e7b3724c01f5a05fc7410ce4204af6a071421325029c",
+    "parts": [
+      "adapters/wrong_lr/adapter_model.safetensors.part001",
+      "adapters/wrong_lr/adapter_model.safetensors.part002"
+    ]
+  },
+  {
+    "path": "submission/packages/lab21_2A202602551_OptionA.zip",
+    "sha256": "fa1dae09eea3d5b35a51aadb2596a7ed10284f19c2c5f4045104c13e0de19cdb",
+    "parts": [
+      "submission/packages/lab21_2A202602551_OptionA.zip.part001",
+      "submission/packages/lab21_2A202602551_OptionA.zip.part002"
+    ]
+  },
+  {
+    "path": "submission/packages/lab21_2A202602551_OptionC.zip",
+    "sha256": "31e498ba774d717135fdb1fa36c92b6618a4e02b0346c8ff748b1d401226b144",
+    "parts": [
+      "submission/packages/lab21_2A202602551_OptionC.zip.part001"
+    ]
+  }
+]

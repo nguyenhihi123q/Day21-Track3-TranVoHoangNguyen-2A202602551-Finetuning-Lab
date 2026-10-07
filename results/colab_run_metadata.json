@@ -1,0 +1,9 @@
+{
+  "source_commit": "d27c1c02ebe99f32f52f706be88b4c30fb1d7fca",
+  "snapshot_sha256": "8e6925811850051cfd575eb790973b95a7549277be2e54eda70a4e2fb3017ae1",
+  "compute_tier": "T4",
+  "epochs": 2,
+  "mask_mode": "assistant-only",
+  "eval_limit": null,
+  "gpu": "Tesla T4"
+}

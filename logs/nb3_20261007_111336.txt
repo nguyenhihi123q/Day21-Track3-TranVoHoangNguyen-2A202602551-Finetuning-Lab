@@ -1,0 +1,228 @@
+tier=T4  mask=assistant-only  eval_limit=full
+
+========================================================================
+NB3 — train the correct configuration
+========================================================================
+T4 · unsloth/Qwen3.5-4B · all-linear · r=16 · LR 10x · 16-bit
+Tesla T4 (cuda, sm_75, 14.6 GB) -> precision=fp16
+  note: this GPU predates Ampere, so it has NO bfloat16. Using fp16 with gradient scaling instead. Tutorials that hardcode bf16=True fail here.
+
+Loading weights:   0%|          | 0/426 [00:00<?, ?it/s]
+Loading weights:   0%|          | 1/426 [00:09<1:10:14,  9.92s/it]
+Loading weights:  19%|█▊        | 79/426 [00:10<00:32, 10.78it/s] 
+Loading weights:  22%|██▏       | 92/426 [00:10<00:27, 12.11it/s]
+Loading weights:  24%|██▎       | 101/426 [00:11<00:26, 12.08it/s]
+Loading weights:  25%|██▌       | 107/426 [00:11<00:25, 12.50it/s]
+Loading weights:  27%|██▋       | 114/426 [00:12<00:21, 14.23it/s]
+Loading weights:  28%|██▊       | 118/426 [00:12<00:22, 13.65it/s]
+Loading weights:  29%|██▊       | 122/426 [00:12<00:24, 12.63it/s]
+Loading weights:  30%|███       | 129/426 [00:13<00:19, 15.39it/s]
+Loading weights:  31%|███       | 132/426 [00:13<00:23, 12.72it/s]
+Loading weights:  32%|███▏      | 135/426 [00:13<00:24, 11.85it/s]
+Loading weights:  34%|███▎      | 143/426 [00:14<00:16, 17.38it/s]
+Loading weights:  35%|███▍      | 147/426 [00:14<00:18, 14.86it/s]
+Loading weights:  35%|███▌      | 150/426 [00:14<00:21, 13.10it/s]
+Loading weights:  36%|███▌      | 152/426 [00:15<00:25, 10.71it/s]
+Loading weights:  37%|███▋      | 157/426 [00:15<00:20, 13.43it/s]
+Loading weights:  37%|███▋      | 159/426 [00:15<00:20, 13.13it/s]
+Loading weights:  39%|███▉      | 167/426 [00:15<00:13, 19.62it/s]
+Loading weights:  40%|███▉      | 170/426 [00:15<00:12, 20.53it/s]
+Loading weights:  41%|████      | 173/426 [00:16<00:21, 11.57it/s]
+Loading weights:  43%|████▎     | 182/426 [00:16<00:12, 19.25it/s]
+Loading weights:  44%|████▎     | 186/426 [00:17<00:15, 15.13it/s]
+Loading weights:  44%|████▍     | 189/426 [00:17<00:17, 13.54it/s]
+Loading weights:  46%|████▌     | 196/426 [00:17<00:12, 19.04it/s]
+Loading weights:  47%|████▋     | 199/426 [00:17<00:15, 14.77it/s]
+Loading weights:  47%|████▋     | 202/426 [00:18<00:17, 12.45it/s]
+Loading weights:  48%|████▊     | 205/426 [00:18<00:19, 11.13it/s]
+Loading weights:  49%|████▉     | 210/426 [00:18<00:15, 13.91it/s]
+Loading weights:  50%|████▉     | 212/426 [00:19<00:15, 13.40it/s]
+Loading weights:  52%|█████▏    | 220/426 [00:19<00:10, 20.14it/s]
+Loading weights:  52%|█████▏    | 223/426 [00:19<00:09, 20.36it/s]
+Loading weights:  53%|█████▎    | 226/426 [00:20<00:17, 11.66it/s]
+Loading weights:  55%|█████▌    | 235/426 [00:20<00:09, 19.34it/s]
+Loading weights:  56%|█████▌    | 238/426 [00:20<00:12, 15.00it/s]
+Loading weights:  57%|█████▋    | 241/426 [00:20<00:14, 12.56it/s]
+Loading weights:  58%|█████▊    | 249/426 [00:21<00:09, 19.19it/s]
+Loading weights:  59%|█████▉    | 252/426 [00:21<00:11, 14.87it/s]
+Loading weights:  60%|█████▉    | 255/426 [00:21<00:13, 12.55it/s]
+Loading weights:  61%|██████    | 258/426 [00:22<00:15, 11.11it/s]
+Loading weights:  62%|██████▏   | 263/426 [00:22<00:11, 13.91it/s]
+Loading weights:  62%|██████▏   | 265/426 [00:22<00:12, 12.89it/s]
+Loading weights:  64%|██████▍   | 273/426 [00:22<00:07, 20.50it/s]
+Loading weights:  65%|██████▍   | 276/426 [00:22<00:07, 20.04it/s]
+Loading weights:  65%|██████▌   | 279/426 [00:23<00:12, 11.93it/s]
+Loading weights:  67%|██████▋   | 287/426 [00:23<00:07, 19.09it/s]
+Loading weights:  68%|██████▊   | 291/426 [00:24<00:09, 14.28it/s]
+Loading weights:  69%|██████▉   | 294/426 [00:24<00:11, 11.43it/s]
+Loading weights:  71%|███████   | 302/426 [00:24<00:07, 17.25it/s]
+Loading weights:  72%|███████▏  | 305/426 [00:25<00:09, 12.95it/s]
+Loading weights:  72%|███████▏  | 308/426 [00:25<00:11, 10.71it/s]
+Loading weights:  73%|███████▎  | 310/426 [00:25<00:10, 11.38it/s]
+Loading weights:  73%|███████▎  | 312/426 [00:26<00:12,  9.40it/s]
+Loading weights:  75%|███████▍  | 318/426 [00:26<00:08, 12.45it/s]
+Loading weights:  77%|███████▋  | 326/426 [00:26<00:04, 20.25it/s]
+Loading weights:  77%|███████▋  | 330/426 [00:27<00:06, 15.56it/s]
+Loading weights:  78%|███████▊  | 333/426 [00:27<00:07, 12.96it/s]
+Loading weights:  80%|████████  | 341/426 [00:27<00:04, 19.47it/s]
+Loading weights:  81%|████████  | 344/426 [00:27<00:05, 15.04it/s]
+Loading weights:  81%|████████▏ | 347/426 [00:28<00:06, 12.60it/s]
+Loading weights:  83%|████████▎ | 355/426 [00:28<00:03, 19.18it/s]
+Loading weights:  84%|████████▍ | 358/426 [00:28<00:04, 14.81it/s]
+Loading weights:  85%|████████▍ | 361/426 [00:29<00:05, 12.51it/s]
+Loading weights:  85%|████████▌ | 364/426 [00:29<00:05, 11.03it/s]
+Loading weights:  87%|████████▋ | 369/426 [00:29<00:04, 13.89it/s]
+Loading weights:  87%|████████▋ | 371/426 [00:30<00:04, 13.34it/s]
+Loading weights:  89%|████████▉ | 379/426 [00:30<00:02, 19.89it/s]
+Loading weights:  90%|████████▉ | 382/426 [00:30<00:02, 20.51it/s]
+Loading weights:  90%|█████████ | 385/426 [00:30<00:03, 11.74it/s]
+Loading weights:  92%|█████████▏| 394/426 [00:31<00:01, 19.41it/s]
+Loading weights:  93%|█████████▎| 397/426 [00:31<00:01, 15.07it/s]
+Loading weights:  94%|█████████▍| 400/426 [00:31<00:02, 12.60it/s]
+Loading weights:  96%|█████████▌| 408/426 [00:32<00:00, 19.28it/s]
+Loading weights:  96%|█████████▋| 411/426 [00:32<00:01, 14.88it/s]
+Loading weights:  97%|█████████▋| 414/426 [00:32<00:00, 12.47it/s]
+Loading weights:  98%|█████████▊| 417/426 [00:33<00:00, 11.09it/s]
+Loading weights:  99%|█████████▉| 422/426 [00:33<00:00, 13.84it/s]
+Loading weights: 100%|█████████▉| 424/426 [00:33<00:00, 14.37it/s]
+Loading weights: 100%|██████████| 426/426 [00:33<00:00, 12.71it/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+{
+  "num_hidden_layers": 32,
+  "full_attention_interval": 4,
+  "linear_num_key_heads": 16,
+  "layer_types": {
+    "linear_attention": 24,
+    "full_attention": 8
+  }
+}
+placement=text-linear  modules=['down_proj', 'gate_proj', 'in_proj_a', 'in_proj_b', 'in_proj_qkv', 'in_proj_z', 'k_proj', 'o_proj', 'out_proj', 'q_proj', 'up_proj', 'v_proj']
+trainable LoRA params ≈ 32.46 M
+    {'placement': 'text-linear', 'modules': 12, 'r': 16, 'trainable': 32464896}
+    {'placement': 'attn-only(q,v)', 'modules': 2, 'r': 16, 'trainable': 1835008}
+    {'placement': 'attn-only(q,v) matched', 'modules': 2, 'r': 283, 'trainable': 32456704}
+Dataset({
+    features: ['input_ids', 'labels', 'attention_mask'],
+    num_rows: 225
+})
+mask_mode = assistant-only   supervised 9014/20951 tokens (43.0%)
+epochs=2.0  ->  30 optimizer steps  (NB4 runs its contrasts at exactly this many)
+{
+  "output_dir": "/content/Day21-Finetuning-Lab/adapters/correct",
+  "max_length": "1024",
+  "per_device_train_batch_size": "1",
+  "gradient_accumulation_steps": "16",
+  "learning_rate": "0.0001",
+  "lr_scheduler_type": "cosine",
+  "num_train_epochs": "2.0",
+  "logging_steps": "5",
+  "save_strategy": "no",
+  "report_to": "none",
+  "seed": "42",
+  "packing": "False",
+  "loss_type": "chunked_nll",
+  "gradient_checkpointing": "True",
+  "warmup_steps": "3",
+  "bf16": "False",
+  "fp16": "True",
+  "padding_free": "False"
+}
+
+Truncating train dataset:   0%|          | 0/225 [00:00<?, ? examples/s]
+Truncating train dataset: 100%|██████████| 225/225 [00:00<00:00, 6235.63 examples/s]
+
+Dropping fully masked examples from train dataset:   0%|          | 0/225 [00:00<?, ? examples/s]
+Dropping fully masked examples from train dataset: 100%|██████████| 225/225 [00:00<00:00, 29447.03 examples/s]
+precision fix: {'precision': 'fp16', 'recast': 0, 'trainable_tensors': 496}
+[transformers] The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'eos_token_id': 248046}.
+
+  0%|          | 0/30 [00:00<?, ?it/s][transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+
+  3%|▎         | 1/30 [00:17<08:40, 17.95s/it]
+  7%|▋         | 2/30 [00:33<07:35, 16.25s/it]
+ 10%|█         | 3/30 [00:47<06:51, 15.24s/it]
+ 13%|█▎        | 4/30 [01:01<06:27, 14.91s/it]
+ 17%|█▋        | 5/30 [01:15<06:08, 14.74s/it]
+                                              
+{'loss': '2.163', 'grad_norm': 'nan', 'learning_rate': '9.966e-05', 'entropy': '1.177', 'num_tokens': '7479', 'mean_token_accuracy': '0.6559', 'epoch': '0.3556'}
+
+ 17%|█▋        | 5/30 [01:15<06:08, 14.74s/it]
+ 20%|██        | 6/30 [01:30<05:51, 14.66s/it]
+ 23%|██▎       | 7/30 [01:44<05:34, 14.54s/it]
+ 27%|██▋       | 8/30 [01:59<05:23, 14.72s/it]
+ 30%|███       | 9/30 [02:13<05:04, 14.52s/it]
+ 33%|███▎      | 10/30 [02:28<04:50, 14.51s/it]
+                                               
+{'loss': '1.384', 'grad_norm': '2.583', 'learning_rate': '8.83e-05', 'entropy': '1.032', 'num_tokens': '1.49e+04', 'mean_token_accuracy': '0.7697', 'epoch': '0.7111'}
+
+ 33%|███▎      | 10/30 [02:28<04:50, 14.51s/it]
+ 37%|███▋      | 11/30 [02:42<04:35, 14.48s/it]
+ 40%|████      | 12/30 [02:56<04:18, 14.36s/it]
+ 43%|████▎     | 13/30 [03:10<04:02, 14.28s/it]
+ 47%|████▋     | 14/30 [03:25<03:50, 14.41s/it]
+ 50%|█████     | 15/30 [03:26<02:34, 10.32s/it]
+                                               
+{'loss': '0.1401', 'grad_norm': '0.5936', 'learning_rate': '6.434e-05', 'entropy': '0.2737', 'num_tokens': '2.095e+04', 'mean_token_accuracy': '0.9591', 'epoch': '1'}
+
+ 50%|█████     | 15/30 [03:26<02:34, 10.32s/it]
+ 53%|█████▎    | 16/30 [03:40<02:41, 11.53s/it]
+ 57%|█████▋    | 17/30 [03:55<02:40, 12.32s/it]
+ 60%|██████    | 18/30 [04:09<02:35, 12.99s/it]
+ 63%|██████▎   | 19/30 [04:23<02:25, 13.24s/it]
+ 67%|██████▋   | 20/30 [04:38<02:16, 13.68s/it]
+                                               
+{'loss': '0.02888', 'grad_norm': '1.02', 'learning_rate': '3.566e-05', 'entropy': '0.04031', 'num_tokens': '2.843e+04', 'mean_token_accuracy': '0.987', 'epoch': '1.356'}
+
+ 67%|██████▋   | 20/30 [04:38<02:16, 13.68s/it]
+ 70%|███████   | 21/30 [04:52<02:04, 13.83s/it]
+ 73%|███████▎  | 22/30 [05:06<01:51, 13.94s/it]
+ 77%|███████▋  | 23/30 [05:20<01:37, 13.88s/it]
+ 80%|████████  | 24/30 [05:34<01:23, 13.99s/it]
+ 83%|████████▎ | 25/30 [05:48<01:10, 14.12s/it]
+                                               
+{'loss': '0.01721', 'grad_norm': '0.3614', 'learning_rate': '1.17e-05', 'entropy': '0.02201', 'num_tokens': '3.59e+04', 'mean_token_accuracy': '0.9936', 'epoch': '1.711'}
+
+ 83%|████████▎ | 25/30 [05:48<01:10, 14.12s/it]
+ 87%|████████▋ | 26/30 [06:03<00:57, 14.39s/it]
+ 90%|█████████ | 27/30 [06:18<00:43, 14.46s/it]
+ 93%|█████████▎| 28/30 [06:33<00:29, 14.52s/it]
+ 97%|█████████▋| 29/30 [06:47<00:14, 14.59s/it]
+100%|██████████| 30/30 [06:48<00:00, 10.48s/it]
+                                               
+{'loss': '0.02596', 'grad_norm': 'nan', 'learning_rate': '3.381e-07', 'entropy': '0.01572', 'num_tokens': '4.19e+04', 'mean_token_accuracy': '0.9961', 'epoch': '2'}
+
+100%|██████████| 30/30 [06:48<00:00, 10.48s/it]
+                                               
+{'train_runtime': '408.8', 'train_samples_per_second': '1.101', 'train_steps_per_second': '0.073', 'train_loss': '0.6266', 'epoch': '2'}
+
+100%|██████████| 30/30 [06:48<00:00, 10.48s/it]
+100%|██████████| 30/30 [06:48<00:00, 13.63s/it]
+train 409s  final loss 0.6266
+saved -> /content/Day21-Finetuning-Lab/adapters/correct
+{
+  "run": "correct",
+  "label": "all-linear · r=16 · LR 10x · 16-bit",
+  "tier": "T4",
+  "model": "unsloth/Qwen3.5-4B",
+  "precision": "fp16",
+  "placement": "text-linear",
+  "n_target_modules": 12,
+  "r": 16,
+  "lora_alpha": 32,
+  "learning_rate": 0.0001,
+  "load_in_4bit": false,
+  "trainable_params": 32464896,
+  "train_seconds": 409.3,
+  "peak_vram_gb": 8.78,
+  "final_loss": 0.6266,
+  "mask_mode": "assistant-only",
+  "max_steps": 30
+}
+
+-- NB3 ok in 468s
+
+----------------------------------------
+stage timings
+  nb3       468s  (7.8 min)
+  total     468s (7.8 min)
